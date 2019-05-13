@@ -1,5 +1,9 @@
 ## Change Log
 
+### v0.7.1 / 2019-05-13
+
+- feat: copy_object with optional params opts[:headers]
+
 ### v0.7.0 / 2018-06-05
 
 - deps: upgrade nokogiri to > 1.6 and ruby version >= 2.0

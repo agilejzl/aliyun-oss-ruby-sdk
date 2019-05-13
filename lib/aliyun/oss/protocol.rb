@@ -894,6 +894,8 @@ module Aliyun
             @http.get_resource_path(src_bucket, src_object_name),
           'content-type' => opts[:content_type]
         }
+        headers.merge!(to_lower_case(opts[:headers])) if opts.key?(:headers)
+
         (opts[:metas] || {})
           .each { |k, v| headers["x-oss-meta-#{k.to_s}"] = v.to_s }
 
